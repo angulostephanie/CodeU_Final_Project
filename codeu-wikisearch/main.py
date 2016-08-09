@@ -44,7 +44,14 @@ class ResultHandler(webapp2.RequestHandler):
     def get(self):
         page= JINJA_ENVIRONMENT.get_template('templates/results.html')
         self.response.write(page.render())
-
+    # def post(self):
+    #     ftextField = self.request.get('ftextField')
+    #     radioButton = self.request.get('radioButton')
+    #     stextField = self.request.get('stextField')
+    #
+    #      dict_words = {'ftextField': ftextField,
+    #      'radioButton': radioButton,
+    #      'stextField' : stextField }
 
 
 

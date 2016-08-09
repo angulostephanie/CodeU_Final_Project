@@ -14,11 +14,17 @@
       <input type="radio" name="typeOfSearch" value="reallyUseful"> REALLY useful search
     </form>
     <br>
-    <input type="text" name="search" id = "ftextField" placeholder="First term">
-    <input type="text" name="search" id = "stextField" placeholder="Second term">
-      <a href = "/results">
-        <button type = "button"> Go! </button>
-      </a>
+
+    <form>
+      <input type="text" name="ftextField" placeholder="First term">
+      <input type="radio" name="radioButton" value="and" checked> and
+      <input type="radio" name="radioButton" value="or"> or
+      <input type="text" name="stextField" placeholder="Second term">
+    </form>
+
+    <a href = "/results">
+      <button type = "button"> Go! </button>
+    </a>
 
     <!-- <script>
       function checkFirstTextField() {
