@@ -3,18 +3,37 @@
 
   <head>
     <link rel="stylesheet" type= "text/css" href="/stylesheets/style.css">
+    <!-- <script src="/lib/entry.js" type="text/javascript"></script> -->
   </head>
 
   <body>
     <h1> WikiSearch </h1>
+
     <form>
       <input type="radio" name="typeOfSearch" value="useful" checked> Useful Search
       <input type="radio" name="typeOfSearch" value="reallyUseful"> REALLY useful search
     </form>
     <br>
-    <input type="text" name="search" placeholder="Search">
-    <a href = "/results"><button type="button"> Go! </button> </a>
+    <input type="text" name="search" id = "ftextField" placeholder="First term">
+    <input type="text" name="search" id = "stextField" placeholder="Second term">
+      <a href = "/results">
+        <button type = "button"> Go! </button>
+      </a>
 
+    <!-- <script>
+      function checkFirstTextField() {
+        var text = document.getElementById("#ftextField").value;
+        if(text.length != 0) {
+          alert("Did you mean to enter something in the search bar?");
+          submitOK = "false";
+          return false
+        } else {
+          submitOK = "true"
+          return true
+        }
+        print("hellooooo")
+      }
+      </script> -->
   </body>
 
 
