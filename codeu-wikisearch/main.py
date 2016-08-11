@@ -41,17 +41,18 @@ class MainHandler(webapp2.RequestHandler):
         self.response.write(entry.render())
 
 class ResultHandler(webapp2.RequestHandler):
-    def get(self):
+    def post(self):
+        firstText = self.request.get("firstText")
+        radioButton = self.request.get("#typeOfSearch")
+        # radioButton = self.request.get('radioButton')
+        secondText = self.request.get("secondText")
+        dict_words = {'firstText':firstText, 'secondText': secondText,
+        'radioButton': radioButton}
         page= JINJA_ENVIRONMENT.get_template('templates/results.html')
-        self.response.write(page.render())
-    # def post(self):
-    #     ftextField = self.request.get('ftextField')
-    #     radioButton = self.request.get('radioButton')
-    #     stextField = self.request.get('stextField')
-    #
-    #      dict_words = {'ftextField': ftextField,
-    #      'radioButton': radioButton,
-    #      'stextField' : stextField }
+        self.response.write(page.render(dict_words))
+        print("post called")
+
+
 
 
 

@@ -9,23 +9,49 @@
   <body>
     <h1> WikiSearch </h1>
 
-    <form>
-      <input type="radio" name="typeOfSearch" value="useful" checked> Useful Search
-      <input type="radio" name="typeOfSearch" value="reallyUseful"> REALLY useful search
+    <form action = "/results" method = "POST">
+
+      <input type="radio" name="useful" id = "useful"> Useful Search
+      <input type="radio" name="reallyUseful" id = "reallyUseful"> REALLY useful search
+
+
+      <br>
+      <br>
+
+      <input type="text" name="firstText" placeholder="First term" value = "">
+
+      <select id="operation">
+        <option> and </option>
+        <option> or </option>
+        <option> minus </option>
+      </select>
+
+      <input type="text" name="secondText" placeholder="Second term" value = "">
+      <p id = "typeOfSearch"></p>
+      <button type = "submit" onclick = "onRadioButton()">Go!</button>
+
     </form>
-    <br>
 
-    <form>
-      <input type="text" name="ftextField" placeholder="First term">
-      <input type="radio" name="radioButton" value="and" checked> and
-      <input type="radio" name="radioButton" value="or"> or
-      <input type="text" name="stextField" placeholder="Second term">
-    </form>
+    <script>
+    function onRadioButton() {
+      if(document.getElementById('useful').checked) {
+          document.getElementById("typeOfSearch").innerHTML = "useful"
+        } else if(document.getElementById('reallyUseful').checked) {
+          document.getElementById("typeOfSearch").innerHTML = "reallyUseful"
+        }
+      }
+    </script>
 
-    <a href = "/results">
-      <button type = "button"> Go! </button>
-    </a>
-
+    <!-- <script>
+      function getText() {
+        var text = ""
+        var first = document.getElementById("ftextField").value;
+        var option = operation.options[operation.selectedIndex].text;
+        var second = document.getElementById("ftextField").value;
+        text = first + option + second
+        // document.getElementById("result").value = text
+      }
+    </script> -->
     <!-- <script>
       function checkFirstTextField() {
         var text = document.getElementById("#ftextField").value;

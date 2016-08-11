@@ -3,13 +3,96 @@
 
   <head>
     <link rel="stylesheet" type= "text/css" href="/stylesheets/style.css">
+    <!-- <script src="/lib/entry.js" type="text/javascript"></script> -->
   </head>
 
   <body>
-    <h1> You've searched for:</h1>
-    <span> {{ftextField}} {{radioButton}} {{stextField}} </span>
+    <h1> You've searched for: {{firstText}} {{secondText}} {{radioButton}} </h1>
+    <p> Results: </p>
+
+
+      <a href = "https://en.wikipedia.org/wiki/Philosophy">
+        https://en.wikipedia.org/wiki/Philosophy</a>
+      <br>
+      <br>
+      <a href = "https://en.wikipedia.org/wiki/Consciousness">
+        https://en.wikipedia.org/wiki/Consciousness</a>
+      <br>
+      <br>
+      <a href = "https://en.wikipedia.org/wiki/Science">
+        https://en.wikipedia.org/wiki/Science</a>
+      <br>
+      <br>
+      <a href = "https://en.wikipedia.org/wiki/Java_(programming_language)">
+        https://en.wikipedia.org/wiki/Java_(programming_language)</a>
+      <br>
+      <br>
+      <a href = "https://en.wikipedia.org/wiki/Programming_language">
+        https://en.wikipedia.org/wiki/Programming_language</a>
+      <br>
+      <br>
+      <a href = "https://en.wikipedia.org/wiki/Mathematics">
+        https://en.wikipedia.org/wiki/Mathematics</a>
+      <br>
+      <br>
+      <a href = "https://en.wikipedia.org/wiki/Computer_science">
+        https://en.wikipedia.org/wiki/Computer_science</a>
+      <br>
+      <br>
+      <a href = "https://en.wikipedia.org/wiki/Knowledge">
+        https://en.wikipedia.org/wiki/Knowledge</a>
+      <br>
+      <br>
+      <a href = "https://en.wikipedia.org/wiki/Modern_philosophy">
+        https://en.wikipedia.org/wiki/Mathematics</a>
+      <br>
+      <br>
+      <a href = "https://en.wikipedia.org/wiki/Awareness">
+        https://en.wikipedia.org/wiki/Awareness</a>
+      <br>
+      <br>
+      <a href = "https://en.wikipedia.org/wiki/Property_(philosophy)">
+        https://en.wikipedia.org/wiki/Property_(philosophy)</a>
+      <br>
+      <br>
 
     <a href = "/"><button type="button"> Back to search page </button> </a>
+
+    <script>
+      function getResults() {
+        var fthe = ["https://en.wikipedia.org/wiki/Philosophy",
+        "https://en.wikipedia.org/wiki/Consciousness",
+        "https://en.wikipedia.org/wiki/Science",
+        "https://en.wikipedia.org/wiki/Java_(programming_language)",
+        "https://en.wikipedia.org/wiki/Programming_language",
+        "https://en.wikipedia.org/wiki/Mathematics",
+        "https://en.wikipedia.org/wiki/Computer_science",
+        "https://en.wikipedia.org/wiki/Knowledge",
+        "https://en.wikipedia.org/wiki/Modern_philosophy",
+        "https://en.wikipedia.org/wiki/Awareness",
+        "https://en.wikipedia.org/wiki/Property_(philosophy)"]
+
+        var ftheComputer = ["https://en.wikipedia.org/wiki/Philosophy",
+        "https://en.wikipedia.org/wiki/Consciousness",
+        "https://en.wikipedia.org/wiki/Science",
+        "https://en.wikipedia.org/wiki/Java_(programming_language)",
+        "https://en.wikipedia.org/wiki/Computer_science",
+        "https://en.wikipedia.org/wiki/Programming_language",
+        "https://en.wikipedia.org/wiki/Mathematics",
+        "https://en.wikipedia.org/wiki/Awareness"]
+
+        var sthe = ["Query not specific enough"]
+        var stheComputer = ["https://en.wikipedia.org/wiki/Computer_science",
+        "https://en.wikipedia.org/wiki/Programming_language",
+        "https://en.wikipedia.org/wiki/Mathematics",
+        "https://en.wikipedia.org/wiki/Consciousness",
+        "https://en.wikipedia.org/wiki/Java_(programming_language)",
+        "https://en.wikipedia.org/wiki/Philosophy",
+        "https://en.wikipedia.org/wiki/Science",
+        "https://en.wikipedia.org/wiki/Awareness"]
+
+      }
+    </script>
   </body>
 
 </html>
